@@ -6,6 +6,9 @@ docs/ongoing_report.md
 /target
 Cargo.lock
 
+# --- Docker ---
+/out
+
 # --- Python ---
 __pycache__/
 *.py[cod]
@@ -58,4 +61,3 @@ w
 # --- Misc ---
 .env
 .python-version
-

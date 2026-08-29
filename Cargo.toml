@@ -5,8 +5,8 @@ edition = "2021"
 
 # External consumer of ThetOS.
 [dependencies]
-thetos_entry  = { git = "https://github.com/rullo24/ThetOS", branch = "main" }
-nucleo_l152re = { git = "https://github.com/rullo24/ThetOS", branch = "main" }
+thetos_entry  = { git = "https://github.com/rullo24/ThetOS", tag = "v1.0.0" }
+nucleo_l152re = { git = "https://github.com/rullo24/ThetOS", tag = "v1.0.0" }
 
 # ThetOS panic handlers must not unwind
 [profile.dev]
