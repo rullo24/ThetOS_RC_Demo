@@ -18,7 +18,7 @@ fn panic(_info: &PanicInfo) -> ! {
     loop {}
 }
 
-static mut STACK_POOL: [u8; 4096] = [0; 4096];
+static mut STACK_POOL: [u8; 8192] = [0; 8192];
 
 // external project: bsp named explicitly, no THETOS_BSP env / build.rs needed
 #[entry(bsp = nucleo_l152re)]
