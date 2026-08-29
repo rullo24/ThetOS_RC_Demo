@@ -1,0 +1,8 @@
+[build]
+target = "thumbv7m-none-eabi"
+
+[target.thumbv7m-none-eabi]
+rustflags = [
+    "-C", "link-arg=-Tmemory.x",          # shipped by the stm32l152ret6 crate's build.rs
+    "-C", "link-arg=-Tcommon_minimal.ld", # shipped by the cortex_m crate's build.rs, must be second
+]

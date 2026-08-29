@@ -1,0 +1,17 @@
+[package]
+name = "thetos_rc_demo"
+version = "0.1.0"
+edition = "2021"
+
+# External consumer of ThetOS. Path deps for local iteration; swap to
+# `{ git = "https://github.com/rullo24/ThetOS", tag = "..." }` for a pinned build.
+[dependencies]
+thetos_entry = { path = "../ThetOS/macros/thetos_entry" }
+nucleo_l152re = { path = "../ThetOS/bsp/nucleo/nucleo_l152re" }
+
+# ThetOS panic handlers must not unwind
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
