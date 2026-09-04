@@ -6,6 +6,17 @@ docs/ongoing_report.md
 /target
 Cargo.lock
 
+# KiCad auto-backups
+*-backups/
+*.zip
+
+# Editor local history
+.history/
+**/.history/
+
+# Datasheets
+ds/*.pdf
+
 # --- Docker ---
 /out
 
