@@ -4,7 +4,6 @@ docs/ongoing_report.md
 
 # --- Rust / Cargo ---
 /target
-Cargo.lock
 
 # KiCad auto-backups
 *-backups/

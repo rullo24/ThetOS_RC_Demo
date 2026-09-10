@@ -2434,9 +2434,9 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Notes:\n- All STM32L152RE signals are 3V3"
+	(text "Notes:\n- All Nucleo-L152RE signals are expected 3V3\n- RC can only drive forwards\n- Motor drivers driven using PWM"
 		(exclude_from_sim no)
-		(at 14.732 174.498 0)
+		(at 14.478 160.528 0)
 		(effects
 			(font
 				(size 1.905 1.905)
@@ -2447,254 +2447,266 @@
 		(uuid "625a34bc-8f3d-4ba5-bcbd-1aed53b82f68")
 	)
 	(junction
-		(at 252.73 27.94)
+		(at 213.36 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a80188fc-95d7-4c55-a5fb-fc57744a1fad")
 	)
 	(junction
-		(at 255.27 27.94)
+		(at 215.9 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b30db1f2-82c6-4b39-96df-153001749efc")
 	)
 	(junction
-		(at 250.19 27.94)
+		(at 210.82 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b621b34a-bd2c-43d7-b9e0-2b297951418b")
 	)
 	(no_connect
-		(at 237.49 69.85)
+		(at 198.12 82.55)
 		(uuid "003bccc1-d054-4684-b125-6a7c91dc5ea6")
 	)
 	(no_connect
-		(at 273.05 97.79)
+		(at 233.68 110.49)
 		(uuid "00d5e30f-094b-4ffa-ac25-31c747c88379")
 	)
 	(no_connect
-		(at 273.05 80.01)
+		(at 233.68 92.71)
 		(uuid "07c75b5f-edfd-4542-9fbb-f33c6dd17250")
 	)
 	(no_connect
-		(at 273.05 74.93)
+		(at 233.68 87.63)
 		(uuid "0aa475ff-7b20-4901-b9bb-13a59dc49a57")
 	)
 	(no_connect
-		(at 237.49 59.69)
+		(at 198.12 72.39)
 		(uuid "0e4797f3-e509-4866-95cc-f235bc8ee437")
 	)
 	(no_connect
-		(at 273.05 102.87)
+		(at 233.68 115.57)
 		(uuid "1dd9d073-d53e-488c-a8b7-dba70b13aa17")
 	)
 	(no_connect
-		(at 262.89 29.21)
+		(at 223.52 41.91)
 		(uuid "239e014a-e6d9-426f-aae4-fea80091de73")
 	)
 	(no_connect
-		(at 237.49 64.77)
+		(at 198.12 77.47)
 		(uuid "26c52e7f-f9a7-4b0b-9991-611c20a6d95a")
 	)
 	(no_connect
-		(at 273.05 41.91)
+		(at 233.68 54.61)
 		(uuid "2a733a89-143a-41c4-85b7-62d55e918a07")
 	)
 	(no_connect
-		(at 273.05 115.57)
+		(at 233.68 128.27)
 		(uuid "2c16ffca-1be2-4c65-bcb9-4f3c16971f1b")
 	)
 	(no_connect
-		(at 237.49 36.83)
+		(at 198.12 49.53)
 		(uuid "2df490e8-0b4b-4670-9700-4a26b307a90e")
 	)
 	(no_connect
-		(at 237.49 62.23)
+		(at 198.12 74.93)
 		(uuid "31e894f8-59a6-464c-bdd7-06f5e058e774")
 	)
 	(no_connect
-		(at 273.05 82.55)
+		(at 233.68 95.25)
 		(uuid "33504438-388f-427e-8ab2-313ab54f7423")
 	)
 	(no_connect
-		(at 273.05 46.99)
+		(at 233.68 59.69)
 		(uuid "36039354-a670-4976-bf99-b6a0085be2da")
 	)
 	(no_connect
-		(at 273.05 52.07)
+		(at 233.68 64.77)
 		(uuid "39821f61-30f5-4496-a94a-4e870d0724fa")
 	)
 	(no_connect
-		(at 237.49 49.53)
+		(at 198.12 62.23)
 		(uuid "45ebcf8f-6704-4ce6-879e-c7e1ef9b7351")
 	)
 	(no_connect
-		(at 273.05 100.33)
+		(at 233.68 113.03)
 		(uuid "542aaef6-e08b-48ad-b64e-4d4ae5a6b872")
 	)
 	(no_connect
-		(at 237.49 54.61)
+		(at 198.12 67.31)
 		(uuid "5434a6f9-8424-4aeb-b2ca-f5a52fc3b596")
 	)
 	(no_connect
-		(at 273.05 92.71)
+		(at 233.68 105.41)
 		(uuid "582ef573-f0b9-4f15-9688-bf143bc59ebc")
 	)
 	(no_connect
-		(at 237.49 77.47)
+		(at 198.12 90.17)
 		(uuid "60e3d55f-7051-4d28-a70e-cd8ca221563c")
 	)
 	(no_connect
-		(at 273.05 44.45)
+		(at 233.68 57.15)
 		(uuid "626ceb48-2332-415c-9fba-34fa5b3d6d64")
 	)
 	(no_connect
-		(at 273.05 67.31)
+		(at 233.68 80.01)
 		(uuid "6c9c940b-afeb-4d87-814e-6fc54570f858")
 	)
 	(no_connect
-		(at 237.49 87.63)
+		(at 198.12 100.33)
 		(uuid "79768050-8ce7-4ab9-ad28-f79c68efb173")
 	)
 	(no_connect
-		(at 273.05 57.15)
+		(at 233.68 69.85)
 		(uuid "8821cc35-3562-4987-bb9e-e47af4ded7a4")
 	)
 	(no_connect
-		(at 273.05 107.95)
+		(at 233.68 120.65)
 		(uuid "89f69cca-295b-4bad-b179-ec7527fefa84")
 	)
 	(no_connect
-		(at 237.49 85.09)
+		(at 198.12 97.79)
 		(uuid "8cfbe793-fe81-4c60-9492-ae8d67d305f4")
 	)
 	(no_connect
-		(at 273.05 90.17)
+		(at 233.68 102.87)
 		(uuid "92f7a70c-8b5d-4b1d-9f9c-d79fe3a7ca0a")
 	)
 	(no_connect
-		(at 273.05 69.85)
+		(at 233.68 82.55)
 		(uuid "96d5f578-d39d-4beb-a8b4-1f95b1fc185c")
 	)
 	(no_connect
-		(at 273.05 113.03)
+		(at 233.68 125.73)
 		(uuid "9806c2e9-affb-4353-94a7-fef56d17836f")
 	)
 	(no_connect
-		(at 237.49 80.01)
+		(at 198.12 92.71)
 		(uuid "9d18d2f7-1396-4620-8377-1e76473d808c")
 	)
 	(no_connect
-		(at 237.49 74.93)
+		(at 198.12 87.63)
 		(uuid "9dbb8eaf-b707-4205-8989-7098277e982c")
 	)
 	(no_connect
-		(at 273.05 95.25)
-		(uuid "9e697396-9298-4b0a-a943-ecbb8a88693d")
-	)
-	(no_connect
-		(at 273.05 87.63)
+		(at 233.68 100.33)
 		(uuid "a617f621-de26-4d73-8b38-b113ed42e1aa")
 	)
 	(no_connect
-		(at 273.05 72.39)
+		(at 233.68 85.09)
 		(uuid "a6a609e5-aac1-4c8a-b503-c47d127e3147")
 	)
 	(no_connect
-		(at 273.05 64.77)
+		(at 233.68 77.47)
 		(uuid "a71667ec-3833-47c8-9569-6f16ecb80b18")
 	)
 	(no_connect
-		(at 237.49 72.39)
+		(at 198.12 85.09)
 		(uuid "a7a1a6b5-214e-473c-973b-ce62fc9d1c2c")
 	)
 	(no_connect
-		(at 273.05 59.69)
+		(at 233.68 72.39)
 		(uuid "a885ecb6-f670-432a-8c1c-c343934cd930")
 	)
 	(no_connect
-		(at 237.49 41.91)
+		(at 198.12 54.61)
 		(uuid "acb66bc1-3282-4481-87be-ba292d8f9259")
 	)
 	(no_connect
-		(at 257.81 125.73)
+		(at 218.44 138.43)
 		(uuid "b0881f92-3f15-4e17-9014-c801562c8a72")
 	)
 	(no_connect
-		(at 273.05 36.83)
+		(at 233.68 49.53)
 		(uuid "b439cca8-9e18-4454-98e5-61f0e8299bac")
 	)
 	(no_connect
-		(at 273.05 118.11)
+		(at 233.68 130.81)
 		(uuid "bdc9dea5-3dab-4cae-8c88-89ae053bd538")
 	)
 	(no_connect
-		(at 273.05 85.09)
+		(at 233.68 97.79)
 		(uuid "c02d342e-e541-4483-9571-1d10da22e831")
 	)
 	(no_connect
-		(at 273.05 49.53)
+		(at 233.68 62.23)
 		(uuid "c2f18bfd-671b-4720-92f5-19f6e24278f3")
 	)
 	(no_connect
-		(at 297.18 19.05)
+		(at 257.81 31.75)
 		(uuid "c72764bb-a2fe-4c29-b889-92a438c1a51f")
 	)
 	(no_connect
-		(at 237.49 82.55)
+		(at 198.12 95.25)
 		(uuid "d0b1b8f8-e7a5-41c4-bd0b-3854545b0011")
 	)
 	(no_connect
-		(at 273.05 62.23)
+		(at 233.68 74.93)
 		(uuid "d1e8ce28-6ae2-4ab2-bff0-78f35ae3e844")
 	)
 	(no_connect
-		(at 273.05 54.61)
-		(uuid "d1f9f3bf-d2ec-4b6a-8000-bd341632c6e5")
-	)
-	(no_connect
-		(at 237.49 97.79)
+		(at 198.12 110.49)
 		(uuid "d663f7ef-a895-4521-9c19-e3aca8a511e0")
 	)
 	(no_connect
-		(at 237.49 67.31)
+		(at 198.12 80.01)
 		(uuid "d72ee050-d333-4ff7-b299-d637eb90c2ad")
 	)
 	(no_connect
-		(at 237.49 92.71)
+		(at 198.12 105.41)
 		(uuid "d784cf0f-3a4e-4e40-9952-4df3ccf78047")
 	)
 	(no_connect
-		(at 260.35 29.21)
+		(at 220.98 41.91)
 		(uuid "eaa2eb7f-f23f-4015-ae71-0475aff08b72")
 	)
 	(no_connect
-		(at 273.05 39.37)
+		(at 233.68 52.07)
 		(uuid "ed676512-d39a-4d72-87f3-411b963a1e5c")
 	)
 	(no_connect
-		(at 237.49 46.99)
+		(at 198.12 59.69)
 		(uuid "ef2eaefb-f6ae-4b8a-a546-c5536b715197")
 	)
 	(no_connect
-		(at 273.05 105.41)
+		(at 233.68 118.11)
 		(uuid "f3040827-ab8e-4a20-8be9-aa8e6123d0c0")
 	)
 	(no_connect
-		(at 273.05 110.49)
+		(at 233.68 123.19)
 		(uuid "f822ceff-b78a-46b5-a9d3-31b3f31b45be")
 	)
 	(no_connect
-		(at 237.49 90.17)
+		(at 198.12 102.87)
 		(uuid "faf51345-f57d-45f4-8b98-c799d4d46b4e")
 	)
 	(no_connect
-		(at 237.49 95.25)
+		(at 198.12 107.95)
 		(uuid "feaccfa5-ef40-42b1-8dbd-fffdc2daf1d0")
 	)
 	(wire
 		(pts
-			(xy 257.81 27.94) (xy 255.27 27.94)
+			(xy 236.22 107.95) (xy 233.68 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a772137-e655-46d7-8bf9-541aa9023e8c")
+	)
+	(wire
+		(pts
+			(xy 233.68 67.31) (xy 236.22 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32f0aeea-7256-4229-ac08-cf14502e9ab5")
+	)
+	(wire
+		(pts
+			(xy 218.44 40.64) (xy 215.9 40.64)
 		)
 		(stroke
 			(width 0)
@@ -2704,7 +2716,7 @@
 	)
 	(wire
 		(pts
-			(xy 252.73 27.94) (xy 250.19 27.94)
+			(xy 213.36 40.64) (xy 210.82 40.64)
 		)
 		(stroke
 			(width 0)
@@ -2714,7 +2726,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 93.98) (xy 165.1 93.98)
+			(xy 134.62 104.14) (xy 139.7 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2724,7 +2736,7 @@
 	)
 	(wire
 		(pts
-			(xy 252.73 27.94) (xy 252.73 29.21)
+			(xy 213.36 40.64) (xy 213.36 41.91)
 		)
 		(stroke
 			(width 0)
@@ -2734,7 +2746,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 27.94) (xy 250.19 26.67)
+			(xy 210.82 40.64) (xy 210.82 39.37)
 		)
 		(stroke
 			(width 0)
@@ -2744,7 +2756,7 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 27.94) (xy 252.73 27.94)
+			(xy 215.9 40.64) (xy 213.36 40.64)
 		)
 		(stroke
 			(width 0)
@@ -2754,7 +2766,7 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 27.94) (xy 255.27 29.21)
+			(xy 215.9 40.64) (xy 215.9 41.91)
 		)
 		(stroke
 			(width 0)
@@ -2764,7 +2776,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 93.98) (xy 127 93.98)
+			(xy 99.06 104.14) (xy 101.6 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2774,7 +2786,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 68.58) (xy 165.1 68.58)
+			(xy 134.62 78.74) (xy 139.7 78.74)
 		)
 		(stroke
 			(width 0)
@@ -2784,7 +2796,7 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 29.21) (xy 257.81 27.94)
+			(xy 218.44 41.91) (xy 218.44 40.64)
 		)
 		(stroke
 			(width 0)
@@ -2794,7 +2806,7 @@
 	)
 	(wire
 		(pts
-			(xy 124.46 68.58) (xy 127 68.58)
+			(xy 99.06 78.74) (xy 101.6 78.74)
 		)
 		(stroke
 			(width 0)
@@ -2804,7 +2816,7 @@
 	)
 	(wire
 		(pts
-			(xy 250.19 27.94) (xy 250.19 29.21)
+			(xy 210.82 40.64) (xy 210.82 41.91)
 		)
 		(stroke
 			(width 0)
@@ -2812,8 +2824,18 @@
 		)
 		(uuid "e002c6cc-12f8-4b94-93ca-ae47fc0350e5")
 	)
+	(label "PB6_D10"
+		(at 236.22 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1f1f1010-d327-4c66-8afc-b0862c256209")
+	)
 	(label "PA7_D11"
-		(at 124.46 93.98 180)
+		(at 99.06 104.14 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2822,8 +2844,18 @@
 		)
 		(uuid "45164d9a-62fa-42bb-a563-b750002dfbf0")
 	)
+	(label "PA7_D11"
+		(at 236.22 67.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "59d38196-b537-4ff5-96ad-74e137a266e4")
+	)
 	(label "PB6_D10"
-		(at 124.46 68.58 180)
+		(at 99.06 78.74 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2834,7 +2866,7 @@
 	)
 	(symbol
 		(lib_id "Device:Battery")
-		(at 49.53 115.57 0)
+		(at 54.61 90.17 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2845,7 +2877,7 @@
 		(fields_autoplaced yes)
 		(uuid "01b7a507-bfab-4896-8680-d17fe2002e34")
 		(property "Reference" "BT1"
-			(at 53.34 113.7284 0)
+			(at 58.42 88.3284 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2856,7 +2888,7 @@
 			)
 		)
 		(property "Value" "2-Cell Battery (~7.4V)"
-			(at 53.34 116.2684 0)
+			(at 58.42 90.8684 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2867,7 +2899,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 49.53 114.046 90)
+			(at 54.61 88.646 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2878,7 +2910,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 49.53 114.046 90)
+			(at 54.61 88.646 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2889,7 +2921,7 @@
 			)
 		)
 		(property "Description" "Multiple-cell battery"
-			(at 49.53 115.57 0)
+			(at 54.61 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2900,7 +2932,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 49.53 115.57 0)
+			(at 54.61 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2911,7 +2943,7 @@
 			)
 		)
 		(property "Sim.Type" "DC"
-			(at 49.53 115.57 0)
+			(at 54.61 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2922,7 +2954,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 49.53 115.57 0)
+			(at 54.61 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2949,7 +2981,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 165.1 81.28 0)
+		(at 139.7 91.44 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2960,7 +2992,7 @@
 		(fields_autoplaced yes)
 		(uuid "191d3490-6e4a-4b17-a69b-305187d0a9bc")
 		(property "Reference" "#PWR02"
-			(at 165.1 87.63 0)
+			(at 139.7 97.79 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2971,7 +3003,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 165.1 86.36 0)
+			(at 139.7 96.52 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2981,7 +3013,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 165.1 81.28 0)
+			(at 139.7 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2992,7 +3024,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 165.1 81.28 0)
+			(at 139.7 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3003,7 +3035,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 165.1 81.28 0)
+			(at 139.7 91.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3027,7 +3059,7 @@
 	)
 	(symbol
 		(lib_id "MCU_ST_STM32L1:STM32L152RETx")
-		(at 255.27 77.47 0)
+		(at 215.9 90.17 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3038,7 +3070,7 @@
 		(fields_autoplaced yes)
 		(uuid "1be50d5f-b1ce-45ce-b090-6351d62709bc")
 		(property "Reference" "U1"
-			(at 259.9533 125.73 0)
+			(at 220.5833 138.43 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3049,7 +3081,7 @@
 			)
 		)
 		(property "Value" "Nucleo-L152RE"
-			(at 259.9533 128.27 0)
+			(at 220.5833 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3060,7 +3092,7 @@
 			)
 		)
 		(property "Footprint" "Package_QFP:LQFP-64_10x10mm_P0.5mm"
-			(at 240.03 123.19 0)
+			(at 200.66 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3072,7 +3104,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.st.com/resource/en/datasheet/stm32l152re.pdf"
-			(at 255.27 77.47 0)
+			(at 215.9 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3083,7 +3115,7 @@
 			)
 		)
 		(property "Description" "STMicroelectronics Arm Cortex-M3 MCU, 512KB flash, 80KB RAM, 32 MHz, 1.65-3.6V, 51 GPIO, LQFP64"
-			(at 255.27 77.47 0)
+			(at 215.9 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3296,7 +3328,7 @@
 	)
 	(symbol
 		(lib_id "Motor:Motor_DC")
-		(at 165.1 99.06 0)
+		(at 139.7 109.22 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3307,7 +3339,7 @@
 		(fields_autoplaced yes)
 		(uuid "24c83813-e0d8-47b5-8d93-a8d878f071e5")
 		(property "Reference" "M1"
-			(at 170.18 100.3299 0)
+			(at 144.78 110.4899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3318,7 +3350,7 @@
 			)
 		)
 		(property "Value" "Motor_DC_LEFT"
-			(at 170.18 102.8699 0)
+			(at 144.78 113.0299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3329,7 +3361,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 165.1 101.346 0)
+			(at 139.7 111.506 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3340,7 +3372,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 165.1 101.346 0)
+			(at 139.7 111.506 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3351,7 +3383,7 @@
 			)
 		)
 		(property "Description" "DC Motor"
-			(at 165.1 99.06 0)
+			(at 139.7 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3378,7 +3410,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 250.19 26.67 0)
+		(at 210.82 39.37 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3389,7 +3421,7 @@
 		(fields_autoplaced yes)
 		(uuid "323c9b74-fb7b-43e2-a8da-a7bf2bec826b")
 		(property "Reference" "#PWR04"
-			(at 250.19 30.48 0)
+			(at 210.82 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3400,7 +3432,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 250.19 21.59 0)
+			(at 210.82 34.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3410,7 +3442,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 250.19 26.67 0)
+			(at 210.82 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3421,7 +3453,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 250.19 26.67 0)
+			(at 210.82 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3432,7 +3464,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 250.19 26.67 0)
+			(at 210.82 39.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3456,7 +3488,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 49.53 120.65 0)
+		(at 54.61 95.25 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3467,7 +3499,7 @@
 		(fields_autoplaced yes)
 		(uuid "aabfdb6d-72b9-4cd1-b8b5-ae54480cbc33")
 		(property "Reference" "#PWR05"
-			(at 49.53 127 0)
+			(at 54.61 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3478,7 +3510,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 49.53 125.73 0)
+			(at 54.61 100.33 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3488,7 +3520,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 49.53 120.65 0)
+			(at 54.61 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3499,7 +3531,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 49.53 120.65 0)
+			(at 54.61 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3510,7 +3542,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 49.53 120.65 0)
+			(at 54.61 95.25 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3534,7 +3566,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 49.53 110.49 0)
+		(at 54.61 85.09 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3544,7 +3576,7 @@
 		(dnp no)
 		(uuid "b9c9c88a-97a9-40bd-b2b6-da30ef92f0c5")
 		(property "Reference" "#PWR06"
-			(at 49.53 114.3 0)
+			(at 54.61 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3555,7 +3587,7 @@
 			)
 		)
 		(property "Value" "VBATT"
-			(at 49.53 105.918 0)
+			(at 54.61 80.518 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3565,7 +3597,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 49.53 110.49 0)
+			(at 54.61 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3576,7 +3608,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 49.53 110.49 0)
+			(at 54.61 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3587,7 +3619,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 49.53 110.49 0)
+			(at 54.61 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3611,7 +3643,7 @@
 	)
 	(symbol
 		(lib_id "Motor:Motor_DC")
-		(at 165.1 73.66 0)
+		(at 139.7 83.82 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3622,7 +3654,7 @@
 		(fields_autoplaced yes)
 		(uuid "bd724f40-7fa4-41de-827c-4fdec3681149")
 		(property "Reference" "M2"
-			(at 170.18 74.9299 0)
+			(at 144.78 85.0899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3633,7 +3665,7 @@
 			)
 		)
 		(property "Value" "Motor_DC_RIGHT"
-			(at 170.18 77.4699 0)
+			(at 144.78 87.6299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3644,7 +3676,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 165.1 75.946 0)
+			(at 139.7 86.106 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3655,7 +3687,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 165.1 75.946 0)
+			(at 139.7 86.106 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3666,7 +3698,7 @@
 			)
 		)
 		(property "Description" "DC Motor"
-			(at 165.1 73.66 0)
+			(at 139.7 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3693,7 +3725,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 165.1 106.68 0)
+		(at 139.7 116.84 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3704,7 +3736,7 @@
 		(fields_autoplaced yes)
 		(uuid "c090b2f6-04d9-427d-be09-7fad1895e82d")
 		(property "Reference" "#PWR01"
-			(at 165.1 113.03 0)
+			(at 139.7 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3715,7 +3747,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 165.1 111.76 0)
+			(at 139.7 121.92 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3725,7 +3757,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 165.1 106.68 0)
+			(at 139.7 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3736,7 +3768,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 165.1 106.68 0)
+			(at 139.7 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3747,7 +3779,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 165.1 106.68 0)
+			(at 139.7 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3771,7 +3803,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 255.27 125.73 0)
+		(at 215.9 138.43 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3782,7 +3814,7 @@
 		(fields_autoplaced yes)
 		(uuid "c8ae39ce-dd2e-484d-ba5b-48fdebca3c9e")
 		(property "Reference" "#PWR08"
-			(at 255.27 132.08 0)
+			(at 215.9 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3793,7 +3825,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 255.27 130.81 0)
+			(at 215.9 143.51 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3803,7 +3835,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 255.27 125.73 0)
+			(at 215.9 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3814,7 +3846,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 255.27 125.73 0)
+			(at 215.9 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3825,7 +3857,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 255.27 125.73 0)
+			(at 215.9 138.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3848,7 +3880,7 @@
 		)
 	)
 	(sheet
-		(at 127 87.63)
+		(at 101.6 97.79)
 		(size 33.02 12.7)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3864,7 +3896,7 @@
 		)
 		(uuid "ab0bdedb-5e1f-4c39-bfa0-501ba08bde32")
 		(property "Sheetname" "LEFT MOTOR DRIVER"
-			(at 127 86.9184 0)
+			(at 101.6 97.0784 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3877,7 +3909,7 @@
 			)
 		)
 		(property "Sheetfile" "motor_driver_stage.kicad_sch"
-			(at 127 100.9146 0)
+			(at 101.6 111.0746 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3889,7 +3921,7 @@
 			)
 		)
 		(pin "SW_EN" input
-			(at 127 93.98 180)
+			(at 101.6 104.14 180)
 			(uuid "19a3c277-5296-4372-ac3c-312684ce6406")
 			(effects
 				(font
@@ -3899,7 +3931,7 @@
 			)
 		)
 		(pin "VOUT" output
-			(at 160.02 93.98 0)
+			(at 134.62 104.14 0)
 			(uuid "d8456fac-5854-406c-8c6a-f80600ee9fd4")
 			(effects
 				(font
@@ -3917,7 +3949,7 @@
 		)
 	)
 	(sheet
-		(at 127 62.23)
+		(at 101.6 72.39)
 		(size 33.02 12.7)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3933,7 +3965,7 @@
 		)
 		(uuid "bbe74b95-d64e-4782-bc4f-c9afae1354b2")
 		(property "Sheetname" "RIGHT MOTOR DRIVER"
-			(at 127 61.5184 0)
+			(at 101.6 71.6784 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3946,7 +3978,7 @@
 			)
 		)
 		(property "Sheetfile" "motor_driver_stage.kicad_sch"
-			(at 127 75.5146 0)
+			(at 101.6 85.6746 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3958,7 +3990,7 @@
 			)
 		)
 		(pin "SW_EN" input
-			(at 127 68.58 180)
+			(at 101.6 78.74 180)
 			(uuid "2ef40c2b-66cb-46bb-83bd-4791c3f9d867")
 			(effects
 				(font
@@ -3968,7 +4000,7 @@
 			)
 		)
 		(pin "VOUT" output
-			(at 160.02 68.58 0)
+			(at 134.62 78.74 0)
 			(uuid "ed60c7e5-d7ad-450e-9d96-7a59857c5a45")
 			(effects
 				(font

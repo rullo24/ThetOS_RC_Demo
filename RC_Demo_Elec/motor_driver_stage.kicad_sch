@@ -1158,6 +1158,26 @@
 		)
 		(uuid "17b416ea-d4cc-40aa-a605-d86411cd9426")
 	)
+	(text_box "SW_EN driven by PWM"
+		(exclude_from_sim no)
+		(at 133.35 74.7917 0)
+		(size 24.13 3.9483)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "78f486eb-60e6-4af0-b6bb-efcfd5eb2fd6")
+	)
 	(text_box "SW_EN: \n3V3 = MTR ON\n0V = MTR OFF"
 		(exclude_from_sim no)
 		(at 102.87 112.3332 0)
@@ -2319,10 +2339,4 @@
 			)
 		)
 	)
-	(sheet_instances
-		(path "/"
-			(page "1")
-		)
-	)
-	(embedded_fonts no)
 )
