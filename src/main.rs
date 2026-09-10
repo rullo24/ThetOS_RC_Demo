@@ -28,10 +28,22 @@ fn app_main() -> ! {
     let mut system = System::new_with_pool(p_stack_pool).unwrap();
 
     system
-        .spawn_task(TaskId(1), TaskPriority::default(), 2048, comms_task, null_mut())
+        .spawn_task(
+            TaskId(1),
+            TaskPriority::default(),
+            2048,
+            comms_task,
+            null_mut(),
+        )
         .unwrap();
     system
-        .spawn_task(TaskId(2), TaskPriority::default(), 2048, drive_task, null_mut())
+        .spawn_task(
+            TaskId(2),
+            TaskPriority::default(),
+            2048,
+            drive_task,
+            null_mut(),
+        )
         .unwrap();
     system
         .spawn_task(
