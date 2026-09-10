@@ -10,8 +10,9 @@ use nucleo_l152re::{System, TaskId, TaskPriority};
 use thetos_entry::entry;
 
 // USER INCLUDES
+mod shared;
 mod tasks;
-use tasks::blink_task;
+use tasks::{comms_task, drive_task, heartbeat_task};
 
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {
@@ -25,14 +26,22 @@ static mut STACK_POOL: [u8; 8192] = [0; 8192];
 fn app_main() -> ! {
     let p_stack_pool = unsafe { &mut *addr_of_mut!(STACK_POOL) };
     let mut system = System::new_with_pool(p_stack_pool).unwrap();
+
+    system
+        .spawn_task(TaskId(1), TaskPriority::default(), 2048, comms_task, null_mut())
+        .unwrap();
+    system
+        .spawn_task(TaskId(2), TaskPriority::default(), 2048, drive_task, null_mut())
+        .unwrap();
     system
         .spawn_task(
-            TaskId(1),
-            TaskPriority::default(),
+            TaskId(3),
+            TaskPriority::new(20).unwrap(), // below comms/drive -> status only
             1024,
-            blink_task,
+            heartbeat_task,
             null_mut(),
         )
         .unwrap();
+
     system.run();
 }
