@@ -28,9 +28,12 @@ impl MotorProfile for RcCarDrivetrain {
     }
 
     fn target_turn_mv(&self, wheel: Wheel) -> u32 {
+        // deliberate full stop, not a near-stall guess -> this drivetrain's operating
+        // range is narrow enough ("moves solidly" or "doesn't move") that a "slows but
+        // keeps turning" voltage isn't reliably available; skid/pivot on one wheel instead
         match wheel {
-            Wheel::Left => 5_500,
-            Wheel::Right => 5_500,
+            Wheel::Left => 0,
+            Wheel::Right => 0,
         }
     }
 }
