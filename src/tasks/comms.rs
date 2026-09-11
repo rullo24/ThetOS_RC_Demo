@@ -5,7 +5,7 @@ use nucleo_l152re::{system, Serial, Uart, UartConfig, UninitUart, PA2, PA3};
 // USER INCLUDES
 use crate::shared::{LEFT_DUTY, RIGHT_DUTY};
 
-const CRUISE: u16 = 45_000; // ~69% duty -> forward speed, tune on the bench
+const CRUISE: u16 = u16::MAX; // 100% duty for now -> bench-testing the gate-drive stage with a static level
 const TURN_DROP: u16 = 25_000; // inside wheel slows by this when veering
 const IDLE_POLL_MS: u32 = 2; // yield this long when no byte is waiting
 
