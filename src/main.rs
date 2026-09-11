@@ -10,6 +10,9 @@ use nucleo_l152re::{System, TaskId, TaskPriority};
 use thetos_entry::entry;
 
 // USER INCLUDES
+mod battery;
+mod config;
+mod motor;
 mod shared;
 mod tasks;
 use tasks::{comms_task, drive_task, heartbeat_task};
@@ -31,6 +34,8 @@ fn app_main() -> ! {
     let stack_pool: &mut AlignedStackPool = unsafe { &mut *addr_of_mut!(STACK_POOL) };
     let p_stack_pool: &mut [u8] = &mut stack_pool.0;
     let mut system = System::new_with_pool(p_stack_pool).unwrap();
+
+    config::apply_startup_config(); // seed per-wheel duty from the active battery + motor runstates
 
     system
         .spawn_task(

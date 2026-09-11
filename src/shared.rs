@@ -5,3 +5,10 @@ use core::sync::atomic::AtomicU16;
 
 pub static LEFT_DUTY: AtomicU16 = AtomicU16::new(0);
 pub static RIGHT_DUTY: AtomicU16 = AtomicU16::new(0);
+
+// per-wheel cruise/turn duty, seeded from the motor+battery runstate at boot,
+// live-tunable over serial so each motor can be trimmed independently
+pub static LEFT_CRUISE_DUTY: AtomicU16 = AtomicU16::new(0);
+pub static RIGHT_CRUISE_DUTY: AtomicU16 = AtomicU16::new(0);
+pub static LEFT_TURN_DUTY: AtomicU16 = AtomicU16::new(0);
+pub static RIGHT_TURN_DUTY: AtomicU16 = AtomicU16::new(0);
