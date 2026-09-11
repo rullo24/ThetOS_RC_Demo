@@ -8,8 +8,10 @@ pub extern "C" fn heartbeat_task(_arg: *mut ()) -> ! {
     let mut ld2 = PA5.into_output(OutputStyle::PushPull);
     loop {
         ld2.set(GpioLevel::High);
-        system::delay_ms(HALF_PERIOD_MS).unwrap();
+        // delay_ms can only fail from a kernel-level fault; degrade to a faster blink
+        // rather than halting the whole system, since the LED itself is the liveness signal
+        let _ = system::delay_ms(HALF_PERIOD_MS);
         ld2.set(GpioLevel::Low);
-        system::delay_ms(HALF_PERIOD_MS).unwrap();
+        let _ = system::delay_ms(HALF_PERIOD_MS);
     }
 }

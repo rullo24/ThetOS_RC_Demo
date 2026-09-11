@@ -18,6 +18,9 @@ pub extern "C" fn drive_task(_arg: *mut ()) -> ! {
     loop {
         left.set_duty(LEFT_DUTY.load(Ordering::Relaxed));
         right.set_duty(RIGHT_DUTY.load(Ordering::Relaxed));
-        system::delay_ms(DRIVE_PERIOD_MS).unwrap();
+        // delay_ms can only fail from a kernel-level fault, not a per-task condition;
+        // degrade to a tight loop rather than halting the whole system (and the motors
+        // with it) over a missed tick
+        let _ = system::delay_ms(DRIVE_PERIOD_MS);
     }
 }

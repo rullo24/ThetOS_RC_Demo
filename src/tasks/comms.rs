@@ -18,7 +18,11 @@ pub extern "C" fn comms_task(_arg: *mut ()) -> ! {
     loop {
         match serial.read_byte() {
             Ok(Some(byte)) => handle_byte(&mut serial, byte),
-            Ok(None) => system::delay_ms(IDLE_POLL_MS).unwrap(), // let drive run
+            // delay_ms can only fail from a kernel-level fault; degrade to polling
+            // flat out rather than halting the whole system over a missed tick
+            Ok(None) => {
+                let _ = system::delay_ms(IDLE_POLL_MS);
+            }
             Err(_) => {
                 // receive fault -> fail safe to stopped
                 LEFT_DUTY.store(0, Ordering::Relaxed);
