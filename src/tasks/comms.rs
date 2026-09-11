@@ -4,7 +4,8 @@ use nucleo_l152re::{system, Serial, Uart, UartConfig, UninitUart, PA2, PA3};
 
 // USER INCLUDES
 use crate::shared::{
-    LEFT_CRUISE_DUTY, LEFT_DUTY, LEFT_TURN_DUTY, RIGHT_CRUISE_DUTY, RIGHT_DUTY, RIGHT_TURN_DUTY,
+    LEFT_CRUISE_DUTY, LEFT_DUTY, LEFT_TURN_DUTY, LEFT_TURN_OUTSIDE_DUTY, RIGHT_CRUISE_DUTY,
+    RIGHT_DUTY, RIGHT_TURN_DUTY, RIGHT_TURN_OUTSIDE_DUTY,
 };
 
 const CRUISE_STEP: u16 = u16::MAX / 100; // ~1% per trim press
@@ -37,11 +38,15 @@ fn handle_byte<U: Uart>(serial: &mut U, byte: u8) {
     let right_cruise = RIGHT_CRUISE_DUTY.load(Ordering::Relaxed);
     let left_turn = LEFT_TURN_DUTY.load(Ordering::Relaxed);
     let right_turn = RIGHT_TURN_DUTY.load(Ordering::Relaxed);
+    let left_turn_outside = LEFT_TURN_OUTSIDE_DUTY.load(Ordering::Relaxed);
+    let right_turn_outside = RIGHT_TURN_OUTSIDE_DUTY.load(Ordering::Relaxed);
 
     let targets = match byte {
         b'w' => Some((left_cruise, right_cruise)),
-        b'a' => Some((left_turn, right_cruise)), // left is the inside wheel
-        b'd' => Some((left_cruise, right_turn)), // right is the inside wheel
+        // left is the inside wheel (stopped), right is outside (driving, reduced speed)
+        b'a' => Some((left_turn, right_turn_outside)),
+        // right is the inside wheel (stopped), left is outside (driving, reduced speed)
+        b'd' => Some((left_turn_outside, right_turn)),
         b's' | b' ' => Some((0, 0)),
         _ => None,
     };

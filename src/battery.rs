@@ -1,6 +1,7 @@
 // Battery profiles: each pack knows only its own voltage; the duty needed to hit
 // a target average voltage is one shared calculation, so swapping packs never
-// requires re-tuning by hand -- only the new pack's nominal_mv().
+// requires re-tuning by hand -- only the new pack's nominal_mv(). Which pack is
+// active for a build is decided in main.rs and passed in, not fixed here.
 pub trait BatteryProfile {
     /// DESCRIPTION
     /// nominal pack voltage in millivolts
@@ -28,20 +29,3 @@ impl BatteryProfile for TwoCellLipo {
 // impl BatteryProfile for ThreeCellLipo {
 //     fn nominal_mv(&self) -> u32 { 11_100 }
 // }
-
-/// the battery wired in for this run -> add variants as more packs are bench-tuned
-pub enum ActiveBattery {
-    TwoCellLipo(TwoCellLipo),
-    // ThreeCellLipo(ThreeCellLipo),
-}
-
-impl BatteryProfile for ActiveBattery {
-    fn nominal_mv(&self) -> u32 {
-        match self {
-            ActiveBattery::TwoCellLipo(b) => b.nominal_mv(),
-        }
-    }
-}
-
-/// the runstate: which pack is currently in the car
-pub const CURRENT_BATTERY: ActiveBattery = ActiveBattery::TwoCellLipo(TwoCellLipo);

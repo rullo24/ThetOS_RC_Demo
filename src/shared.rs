@@ -12,3 +12,7 @@ pub static LEFT_CRUISE_DUTY: AtomicU16 = AtomicU16::new(0);
 pub static RIGHT_CRUISE_DUTY: AtomicU16 = AtomicU16::new(0);
 pub static LEFT_TURN_DUTY: AtomicU16 = AtomicU16::new(0);
 pub static RIGHT_TURN_DUTY: AtomicU16 = AtomicU16::new(0);
+
+// outside-wheel duty while turning -> deliberately less than straight cruise
+pub static LEFT_TURN_OUTSIDE_DUTY: AtomicU16 = AtomicU16::new(0);
+pub static RIGHT_TURN_OUTSIDE_DUTY: AtomicU16 = AtomicU16::new(0);

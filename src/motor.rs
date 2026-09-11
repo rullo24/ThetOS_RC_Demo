@@ -1,6 +1,7 @@
 // Motor/drivetrain profiles: what average voltage this specific motor + gearbox +
 // chassis needs to move, independent of which battery supplies it. Split per wheel
-// because two "matched" motors rarely draw perfectly evenly in practice.
+// because two "matched" motors rarely draw perfectly evenly in practice. Which
+// drivetrain is active for a build is decided in main.rs and passed in, not fixed here.
 #[derive(Clone, Copy)]
 pub enum Wheel {
     Left,
@@ -15,6 +16,12 @@ pub trait MotorProfile {
     /// DESCRIPTION
     /// average voltage (mV) needed on this wheel while it's the inside of a turn
     fn target_turn_mv(&self, wheel: Wheel) -> u32;
+
+    /// DESCRIPTION
+    /// average voltage (mV) for this wheel while it's the outside (driving) side of a
+    /// turn -> deliberately less than straight-line cruise, since the inside wheel is
+    /// now dragging rather than rolling
+    fn target_turn_outside_mv(&self, wheel: Wheel) -> u32;
 }
 
 /// the two PMOS-switched brushed DC motors + gearbox + wheels currently in the car
@@ -36,27 +43,16 @@ impl MotorProfile for RcCarDrivetrain {
             Wheel::Right => 0,
         }
     }
+
+    fn target_turn_outside_mv(&self, wheel: Wheel) -> u32 {
+        // ~75% of straight cruise, untested -> bench-tune: fast enough to turn cleanly,
+        // slow enough not to fight the dragging inside wheel too hard
+        match wheel {
+            Wheel::Left => 5_250,
+            Wheel::Right => 5_250,
+        }
+    }
 }
 
 // future drivetrains (different motors/gearing/wheels) are another zero-sized
-// type + its own targets, same pattern as ActiveBattery.
-pub enum ActiveMotor {
-    RcCarDrivetrain(RcCarDrivetrain),
-}
-
-impl MotorProfile for ActiveMotor {
-    fn target_cruise_mv(&self, wheel: Wheel) -> u32 {
-        match self {
-            ActiveMotor::RcCarDrivetrain(m) => m.target_cruise_mv(wheel),
-        }
-    }
-
-    fn target_turn_mv(&self, wheel: Wheel) -> u32 {
-        match self {
-            ActiveMotor::RcCarDrivetrain(m) => m.target_turn_mv(wheel),
-        }
-    }
-}
-
-/// the runstate: which drivetrain is currently in the car
-pub const CURRENT_MOTOR: ActiveMotor = ActiveMotor::RcCarDrivetrain(RcCarDrivetrain);
+// type + its own targets, same pattern as this one.

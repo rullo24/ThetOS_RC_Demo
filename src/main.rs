@@ -16,6 +16,8 @@ mod diag;
 mod motor;
 mod shared;
 mod tasks;
+use battery::TwoCellLipo;
+use motor::RcCarDrivetrain;
 use tasks::{comms_task, drive_task, heartbeat_task};
 
 // TIM3 base 0x4000_0400 + CCER offset 0x20 (see bsp pwm.rs) -> written directly here,
@@ -49,14 +51,29 @@ fn app_main() -> ! {
         Err(_) => diag::fail_blink(1), // timer/idle-task init failed
     };
 
-    config::apply_startup_config(); // seed per-wheel duty from the active battery + motor runstates
+    // this build's hardware: swap either line to retarget a different pack or drivetrain
+    let battery = TwoCellLipo;
+    let motor = RcCarDrivetrain;
+    config::apply_startup_config(&battery, &motor); // seed per-wheel duty from them
 
-    let comms_spawn = system.spawn_task(TaskId(1), TaskPriority::default(), 2048, comms_task, null_mut());
+    let comms_spawn = system.spawn_task(
+        TaskId(1),
+        TaskPriority::default(),
+        2048,
+        comms_task,
+        null_mut(),
+    );
     if comms_spawn.is_err() {
         diag::fail_blink(2);
     }
 
-    let drive_spawn = system.spawn_task(TaskId(2), TaskPriority::default(), 2048, drive_task, null_mut());
+    let drive_spawn = system.spawn_task(
+        TaskId(2),
+        TaskPriority::default(),
+        2048,
+        drive_task,
+        null_mut(),
+    );
     if drive_spawn.is_err() {
         diag::fail_blink(3);
     }
@@ -67,8 +84,13 @@ fn app_main() -> ! {
         Err(_) => diag::fail_blink(4),
     };
 
-    let heartbeat_spawn =
-        system.spawn_task(TaskId(3), heartbeat_priority, 1024, heartbeat_task, null_mut());
+    let heartbeat_spawn = system.spawn_task(
+        TaskId(3),
+        heartbeat_priority,
+        1024,
+        heartbeat_task,
+        null_mut(),
+    );
     if heartbeat_spawn.is_err() {
         diag::fail_blink(5);
     }
