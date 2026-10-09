@@ -2,6 +2,9 @@
 ds/*
 docs/ongoing_report.md
 
+# PDF electronics
+RC_Demo_Elec/RC_Demo_Elec.pdf
+
 # --- Rust / Cargo ---
 /target
 
